@@ -1,0 +1,22 @@
+<form [formGroup]="checkboxGroup">
+    <ng-container *ngFor="let checkbox of checkboxes; let i = index" formArrayName="checkboxes">
+      <input type="checkbox" [formControlName]="i" />{{checkbox.name}}
+
+      <br>
+    </ng-container>
+    <button (click)="submit()">Submit</button>
+  </form>
+
+  <br />
+  nuevo campo:
+      <input type="text" [formControl] = "checkBoxNewName"
+       (keyup.enter)="agregarCheck()"/>
+       <br />
+  Checkbox js: {{ checkboxes | json}}
+  <br />
+  Checkbox values: {{ checkboxGroup.controls.checkboxes.value | json}}
+  <br />
+  Submitted values: {{ submittedValue | json}}
+  <br>
+  nuevo campo: {{checkBoxNewName.value | json}}
+  valido campo: {{checkBoxNewName.valid | json}}
