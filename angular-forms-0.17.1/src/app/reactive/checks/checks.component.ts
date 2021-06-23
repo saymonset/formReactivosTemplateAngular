@@ -13,6 +13,8 @@ export interface Data  {
   styleUrls: ['./checks.component.css']
 })
 export class ChecksComponent {
+
+       isAgregarCampoCheck:boolean = false;
      
         checkboxGroup!: FormGroup;
         
@@ -32,6 +34,8 @@ export class ChecksComponent {
         }];
 
         checkboxesAux: any[] = [];
+
+     
 
   // In case the checkboxes have default values
   // defaultValues = ['value-1', 'value-3'];
@@ -57,8 +61,18 @@ export class ChecksComponent {
             this.checkboxesAux = [...this.checkboxGroup.controls.checkboxes.value];
             this.load();
             this.checkBoxNewName.setValue('');
+            this.isAgregarCampoCheck = false;
         }
 
+        onAgregarCampoCheck(){
+            this.isAgregarCampoCheck = true;
+            this.checkBoxNewName.setValue('');
+        }
+
+        onCancelarCampoCheck(){
+          this.isAgregarCampoCheck = false;
+          this.checkBoxNewName.setValue('');
+      }
 
   get checkboxesArray(){
 

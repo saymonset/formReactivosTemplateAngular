@@ -8,10 +8,16 @@
   </form>
 
   <br />
-  nuevo campo:
-      <input type="text" [formControl] = "checkBoxNewName"
-       (keyup.enter)="agregarCheck()"/>
-       <br />
+
+      <div  *ngIf="isAgregarCampoCheck">
+            nuevo campo:
+            <input type="text" [formControl] = "checkBoxNewName"
+            (keyup.enter)="agregarCheck()"/>
+            <br />
+      </div>
+       <li  *ngIf="!isAgregarCampoCheck"><a class='router-link-active' (click)="onAgregarCampoCheck()"> Agregar campo</a></li>
+       <li *ngIf="isAgregarCampoCheck" ><a  class='router-link-active' (click)="onCancelarCampoCheck()"> Cancelar</a></li>
+       <br/>   
   Checkbox js: {{ checkboxes | json}}
   <br />
   Checkbox values: {{ checkboxGroup.controls.checkboxes.value | json}}
