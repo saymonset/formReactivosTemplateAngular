@@ -14,7 +14,7 @@ export interface Data  {
 })
 export class ChecksComponent {
 
-       isAgregarCampoCheck:boolean = false;
+        isAgregarCampoCheck:boolean = false;
      
         checkboxGroup!: FormGroup;
         
@@ -65,6 +65,7 @@ export class ChecksComponent {
         }
 
         onAgregarCampoCheck(){
+            this.load();
             this.isAgregarCampoCheck = true;
             this.checkBoxNewName.setValue('');
         }
@@ -95,8 +96,6 @@ export class ChecksComponent {
     this.subscription = checkboxControl.valueChanges.subscribe(checkbox => {
       checkboxControl.setValue(
         checkboxControl.value.map((value: any, i:any, array:any) => {
-          console.log('=valor='+JSON.stringify(value));
-          //
           return  value ? this.checkboxes[i].value : false
         }),
         { emitEvent: false }
@@ -115,7 +114,20 @@ export class ChecksComponent {
       checkboxes: checkboxControl.value.filter( (value: any) => !!value)
     }
     this.submittedValue = formValue;
+
+    //let compromisos:[] = [];
+    let compromisos = [...formValue.checkboxes];
+    delete formValue.checkboxes;
+    formValue.compromisos = compromisos
+    this.submittedValue = formValue;
+
+    console.log('Valor =' + JSON.stringify(this.submittedValue));
+    // controls.forEach((valor,index, array)=>{
+    
+    //      console.log('Valor =' + JSON.stringify(valor));
+    // })
   }
+  
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
