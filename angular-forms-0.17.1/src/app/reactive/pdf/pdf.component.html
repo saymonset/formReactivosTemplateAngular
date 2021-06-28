@@ -1,4 +1,144 @@
-<h2>Integrate PDF File Viewer in Angular</h2>
+<div class="container icono">
+  <mat-icon class="mat-icon-filled iconoCierre" (click)="cancelar()"
+    >close</mat-icon
+  >
+</div>
 
-<pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: block;">
-</pdf-viewer>
+<h2>Configurar fir</h2>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis odio laudantium
+  blanditiis ipsa nihil repellendus. Saepe, ullam eius. Perspiciatis
+  consequuntur molestiae fugit rerum voluptatibus tempore soluta harum
+  exercitationem provident ex!
+</p>
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col-7">
+     
+    </div>
+    <div class="col-5">
+      <div class="formConfFirma">
+        <div class="row">
+          <div class="col-12">
+            
+          </div>
+        </div>
+        <div class="row formFirma">
+          <div class="col-1"></div>
+          <div class="col-11">
+            <span class="labelForm1">Mostrar firma en:</span>
+          </div>
+        </div>
+        <div class="row formFirma2">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <div class="mat-form-field-box">
+              <span class="labelForm2">{{totalPages}}=TotalPages,Página:</span>
+            </div>
+          </div>
+          <div class="col-3">
+            <mat-form-field>
+              <input
+                matInput
+                type="number"
+                name="InputPagina"
+                [(ngModel)]="pageShow"
+                (change)="pageRendered()"
+              />
+            </mat-form-field>
+          </div>
+          <div class="col-6"></div>
+        </div>
+
+        <div class="row formFirma2">
+          <div class="col-1"></div>
+          <div class="col-11">
+            <div class="mat-form-field-box">
+              <mat-slide-toggle
+                labelPosition="before"
+                color="primary"
+                ariaLabel="Incluir firma solo en la última página:"
+              >
+                Incluir firma solo en la última página:
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+        <div class="row formFirma2">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <div class="mat-form-field-box">
+              <span class="labelForm2">Rotación:</span>
+            </div>
+          </div>
+          <div class="col-3">
+            <mat-form-field>
+              <mat-label></mat-label>
+              <input
+                matInput
+                type="text"
+                name="InputRotacion"
+                [(ngModel)]="rotacionCSV"
+                (keyup)="rotateCSV()"
+              />
+            </mat-form-field>
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <div class="row formFirma">
+          <div class="col-1"></div>
+          <div class="col-11">
+            <span class="labelForm1">CSV:</span>
+          </div>
+        </div>
+        <div class="row formFirma2">
+          <div class="col-1"></div>
+          <div class="col-4">
+            <div class="mat-form-field-box">
+              <span class="labelForm2">Posición CSV:</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <mat-form-field>
+              <mat-label></mat-label>
+              <mat-select [(ngModel)]="posicionCSV">
+                <mat-option value="Derecha" (click)="modifyCsv()">
+                  Derecha
+                </mat-option>
+                <mat-option value="Izquierda" (click)="modifyCsv()">
+                  Izquierda
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-1"></div>
+        </div>
+        <div class="row">
+          <div class="container botonera">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7 square">
+      <div class="contPDF content">
+        <pdf-viewer
+          [src]="pdfSrc"
+          (after-load-complete)="callBackFn($event)"
+          [page]="pageShow"
+          [render-text]="true"
+          [original-size]="false"
+          [show-all]="false"
+          style="display: block"
+          id="xd"
+          (page-rendered)="pageRendered()"
+        >
+        </pdf-viewer>
+      </div>
+    </div>
+    </div>
+</div>
