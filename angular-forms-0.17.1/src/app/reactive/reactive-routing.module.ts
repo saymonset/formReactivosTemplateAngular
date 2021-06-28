@@ -5,6 +5,7 @@ import { BasicosComponent } from './basicos/basicos.component';
 import { DinamicosComponent } from './dinamicos/dinamicos.component';
 import { SwitchesComponent } from './switches/switches.component';
 import { ChecksComponent } from './checks/checks.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: 'dinamicos', component: DinamicosComponent },
       { path: 'switches', component: SwitchesComponent },
       { path: 'checks', component:ChecksComponent },
+      { path: 'pdf', component:PdfComponent },
       { path: '**', redirectTo: 'basicos' }
     ]
   }

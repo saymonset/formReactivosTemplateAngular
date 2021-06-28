@@ -51,6 +51,10 @@ export class SidemenuComponent {
       texto: 'Checks dinamicos',
       ruta: './reactive/checks'
     },
+    {
+      texto: 'Pdfs',
+      ruta: './reactive/pdf'
+    },
   ];
 
 
