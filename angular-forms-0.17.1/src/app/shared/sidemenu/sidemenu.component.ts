@@ -54,6 +54,12 @@ export class SidemenuComponent {
     {
       texto: 'Pdfs',
       ruta: './reactive/pdf'
+    }, {
+      texto: 'Pdfs2',
+      ruta: './reactive/pdf2'
+    }, {
+      texto: 'Solicitudes',
+      ruta: './reactive/solicitudes'
     },
   ];
 

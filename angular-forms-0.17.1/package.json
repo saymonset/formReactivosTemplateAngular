@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
     "@mermaid-js/mermaid-cli": "^8.11.0",
+    "html-to-image": "^1.6.2",
     "ng2-pdf-viewer": "^7.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

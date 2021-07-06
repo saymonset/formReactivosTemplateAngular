@@ -2,6 +2,38 @@
 <hr>
 
 <div class="row">
+
+    
+    
+    
+    <div class="col-12 showPDF">
+        <div class="row">
+            <div class="col-4">
+                <p>certificado title: {{miFormulario.controls['nombre'].value | titlecase}}</p>
+            </div>
+            <div class="col-4">
+                <p>certificado title: {{miFormulario.controls['nombre'].value | titlecase}}</p>
+            </div>
+            <div class="col-4">
+                <p>certificado title: {{miFormulario.controls['nombre'].value | titlecase}}</p>
+            </div>
+
+            <div class="col-4">
+                <p>certificado title: {{miFormulario.controls['nombre'].value | titlecase}}</p>
+            </div>
+            <div class="col-4">
+                <p>certificado title: {{miFormulario.controls['nombre'].value | titlecase}}</p>
+            </div>
+            <div class="col-4">
+                <p>certificado title: {{miFormulario.controls['nombre'].value | titlecase}}</p>
+            </div>
+        </div>
+
+      
+      
+    </div>
+  </div>
+<div class="row">
     <div class="col">
 <!-- [formGroup]="miFormulario" ESton es obligatorio.. -->
         <form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="miFormulario">
@@ -9,6 +41,7 @@
             <!-- Campo de producto -->
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Producto</label>
+                
                 <div class="col-sm-9">
                     
                     <!-- El formControlName debe ser e que esta definido en el ts -->

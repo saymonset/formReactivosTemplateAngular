@@ -10,6 +10,9 @@ import { SwitchesComponent } from './switches/switches.component';
 import { ChecksComponent } from './checks/checks.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { MaterialModule } from '../material/material.module';
+import { Pdf2Component } from './pdf2/pdf2.component';
+import { SolicitudesComponent } from './dinamicos/solicitudes/solicitudes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,15 +20,21 @@ import { MaterialModule } from '../material/material.module';
     DinamicosComponent,
     SwitchesComponent,
     ChecksComponent,
-    PdfComponent
+    PdfComponent,
+    Pdf2Component,
+    SolicitudesComponent
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     PdfViewerModule,
     ReactiveFormsModule,
     FormsModule,
     ReactiveRoutingModule
-  ]
+  ],
+  providers: [
+    { provide: Window, useValue: window }
+]
 })
 export class ReactiveModule { }

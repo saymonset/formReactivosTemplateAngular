@@ -127,6 +127,7 @@
     <div class="col-7 square">
       <div class="contPDF content">
         <pdf-viewer
+          (text-layer-rendered)="textLayerRendered($event)"
           [src]="pdfSrc"
           (after-load-complete)="callBackFn($event)"
           [page]="pageShow"

@@ -43,6 +43,8 @@ export class PdfComponent implements OnInit {
   }
 
 
+
+
   pageRendered() {
 
     const textLayer = document.getElementsByClassName('textLayer');
@@ -54,12 +56,21 @@ export class PdfComponent implements OnInit {
     if (csvDif == undefined) {
       // si no esta creado el divFirma se crea
       let newEle = document.createElement('div'); //divFirma sera el div dinamico en el que se mostrara el csv
+
+      let cssDiv = ` <div> `;
+     // cssDiv += `<div style="color:red;position:absolute;top:95%;right:1%"> CUADRO 1 </div>`;
+
+     
+      cssDiv += `<div style="line-height: 12px; width: 18px; font-size: 8pt; font-family: tahoma; margin-top: 1px;margin-right: 2px; position:absolute; top:0; right:0;"> CUADRO 2 </div>`
+      cssDiv += `</div>`
+
+
       newEle.id = 'divFirma'; //actualmente solo se muestra AQUI IRA LA FIRMA, el cual se cambiara por el csv
-      newEle.setAttribute(
-        'style',
-        'color:blue;position:absolute;top:95%;right:1%'
-      );
-      newEle.innerHTML = 'AQUI IRA LA FIRMA';
+      // newEle.setAttribute(
+      //   'style',
+      //   'color:blue;position:absolute;top:95%;right:1%'
+      // );
+      newEle.innerHTML = cssDiv; // 'AQUI IRA LA FIRMA';
 
       let x = document.getElementsByClassName('textLayer')[0].append(newEle);
     } else {
@@ -69,6 +80,10 @@ export class PdfComponent implements OnInit {
         'color:blue;position:absolute;top:95%;right:1%'
       );
     }
+  }
+
+  textLayerRendered(event: any) {
+    console.log('textLayerRendered', event);
   }
 
 

@@ -1,0 +1,44 @@
+<p>solicitudes works!</p>
+<div class="row">
+    <div class="col-12 solicitudes">
+      <ul>
+        <li *ngFor="let solicitud of solicitudes; let i = index">
+          
+        <div class="row">
+          <div class="col-10">
+            Solicitud - Asunto: {{ solicitud.asunto }}
+          </div>
+          <div  *ngIf="isStartFirmando"  class="col-2">
+                  <mat-icon
+                  style="color: #037cc2"
+                  *ngIf="solicitud.isProcesoFirma" 
+                  >compare_arrows</mat-icon>
+                  <mat-icon
+                  style="color: #037cc2"
+                  *ngIf="solicitud.isPositiveFirma" 
+                  >done</mat-icon>
+                  <mat-icon
+                  style="color: #037cc2"
+                  *ngIf="solicitud.isIncognitaFirma" 
+                  >help</mat-icon>
+                  <mat-icon
+                  style="color: #037cc2"
+                  *ngIf="solicitud.isRechazoFirma" 
+                  >highlight_off</mat-icon>
+
+                  
+          </div>
+
+
+
+        </div>
+        
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+
+  <button id="basic" type="button" mat-button (click)="test()">
+    Basic button
+  </button>
