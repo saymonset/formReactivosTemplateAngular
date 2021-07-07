@@ -8,6 +8,7 @@ import { ChecksComponent } from './checks/checks.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { Pdf2Component } from './pdf2/pdf2.component';
 import { SolicitudesComponent } from './dinamicos/solicitudes/solicitudes.component';
+import { ImgdeldomComponent } from './imgdeldom/imgdeldom.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'pdf', component:PdfComponent },
       { path: 'pdf2', component:Pdf2Component },
       { path: 'solicitudes', component:SolicitudesComponent },
+      { path: 'img', component:ImgdeldomComponent },
       { path: '**', redirectTo: 'basicos' }
     ]
   }

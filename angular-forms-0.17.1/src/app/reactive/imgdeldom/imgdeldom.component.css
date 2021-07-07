@@ -1,0 +1,89 @@
+::ng-deep .text-container > label.title {
+    font-size: 15px;
+  }
+  
+  ::ng-deep .main-text-container > span.main-text {
+    font-size: 12px;
+  }
+  
+  .contPDF {
+    background-color: dimgray;
+    border: 1px solid black;
+    height: 10px;
+    width: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .showPDF {
+    border: 1px gray solid;
+    background-color: lightgray;
+    height: 180px;
+  }
+  
+  
+  .formFirma {
+    padding-top: 15px;
+  }
+  
+  .formFirma .labelForm1 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  ::ng-deep .formFirma2 .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+  
+  .formFirma2 .labelForm2 {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    padding-top: 5px;
+  }
+  ::ng-deep .formFirma2 .mat-slide-toggle-content {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .botonera {
+    margin-top: 70px;
+  }
+  
+  .icono {
+    padding-bottom: 15px;
+  }
+  
+  mat-icon.iconoCierre {
+    position: relative;
+    top: -10px;
+    left: 40px;
+    float: right;
+    height: 36px;
+    width: 36px;
+    font-size: 36px;
+  }
+  
+  mat-icon.iconoCierre:hover {
+    cursor: pointer;
+  }
+  
+  .square {
+    border-style:solid;
+    border-width:2px;
+    border-color:red;
+    position: relative;
+    width: 50%;
+  }
+  
+  .square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }

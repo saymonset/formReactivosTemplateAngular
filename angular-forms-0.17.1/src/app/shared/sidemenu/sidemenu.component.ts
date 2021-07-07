@@ -60,6 +60,9 @@ export class SidemenuComponent {
     }, {
       texto: 'Solicitudes',
       ruta: './reactive/solicitudes'
+    }, {
+      texto: 'img',
+      ruta: './reactive/img'
     },
   ];
 

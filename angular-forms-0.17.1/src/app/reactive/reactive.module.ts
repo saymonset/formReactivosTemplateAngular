@@ -13,6 +13,7 @@ import { MaterialModule } from '../material/material.module';
 import { Pdf2Component } from './pdf2/pdf2.component';
 import { SolicitudesComponent } from './dinamicos/solicitudes/solicitudes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ImgdeldomComponent } from './imgdeldom/imgdeldom.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     ChecksComponent,
     PdfComponent,
     Pdf2Component,
-    SolicitudesComponent
+    SolicitudesComponent,
+    ImgdeldomComponent
   ],
   imports: [
     CommonModule,
