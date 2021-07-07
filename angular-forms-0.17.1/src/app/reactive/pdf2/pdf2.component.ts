@@ -56,15 +56,15 @@ export class Pdf2Component {
 
     if (csvDif == undefined) {
         // si no esta creado el divFirma se crea
-        let newEle = document.createElement('div'); //divFirma sera el div dinamico en el que se mostrara el csv
-        newEle.id = 'divFirma'; //actualmente solo se muestra AQUI IRA LA FIRMA, el cual se cambiara por el csv
-        newEle.setAttribute(
-          'style',
-          'color:blue;position:absolute;top:95%;right:1%'
-        );
-        newEle.innerHTML = 'AQUI IRA LA FIRMA DAVID!!!!!';
-  
-        let x = document.getElementsByClassName('textLayer')[0].append(newEle);
+      let newEle = document.createElement('div'); //divFirma sera el div dinamico en el que se mostrara el csv
+      newEle.id = 'divFirma'; //actualmente solo se muestra AQUI IRA LA FIRMA, el cual se cambiara por el csv
+      newEle.setAttribute(
+        'style',
+        'color:blue;position:absolute;top:95%;right:1%'
+      );
+      newEle.innerHTML = 'AQUI IRA LA FIRMA DAVID!!!!!';
+
+      let x = document.getElementsByClassName('textLayer')[0].append(newEle);
     } else {
       // si esta creado solo se resetea la posicion a derecha  cuando cambia de página
       csvDif.setAttribute(
